@@ -1,0 +1,41 @@
+version: '3.4'
+
+services:
+  mongo:
+    image: mongo
+    
+  zookeeper:
+    image: wurstmeister/zookeeper
+  
+  kafka:
+    image: wurstmeister/kafka
+    
+  login.api:    
+    image: ${DOCKER_REGISTRY-}loginapi
+    build:
+      context: .
+      dockerfile: LoginApp/Dockerfile 
+      
+  flippy.api:    
+    image: ${DOCKER_REGISTRY-}flippyapi
+    build:
+      context: .
+      dockerfile: Flippy/Dockerfile 
+
+  shoppartner.api:    
+    image: ${DOCKER_REGISTRY-}shoppartnerapi
+    build:
+      context: .
+      dockerfile: ShopPartner/Dockerfile   
+
+  deliveryagent.api:    
+    image: ${DOCKER_REGISTRY-}deliveryagentapi
+    build:
+      context: .
+      dockerfile: DeliveryAgent/Dockerfile 
+
+
+
+
+  
+

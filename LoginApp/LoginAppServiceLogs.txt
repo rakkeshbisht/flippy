@@ -1,0 +1,463 @@
+2020-10-28 18:00:12.641 +00:00 [INF] Starting host...
+2020-10-28 18:00:13.890 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-28 18:00:13.931 +00:00 [WRN] No XML encryptor configured. Key {a3441b13-f002-49a2-b245-a6d8d327c22f} may be persisted to storage in unencrypted form.
+2020-10-28 18:00:13.971 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-28 18:00:13.981 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-28 18:00:13.988 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-28 18:00:13.989 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-28 18:00:13.992 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-28 18:00:13.993 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-28 18:00:13.994 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-28 18:00:13.996 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-28 18:00:14.164 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-28 18:00:14.165 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-28 18:00:14.167 +00:00 [INF] Hosting environment: Development
+2020-10-28 18:00:14.170 +00:00 [INF] Content root path: /app
+2020-10-28 18:00:15.041 +00:00 [DBG] Login Url: /Account/Login
+2020-10-28 18:00:15.044 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-28 18:00:15.045 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-28 18:00:15.046 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-28 18:00:15.052 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-28 18:00:15.053 +00:00 [DBG] Error Url: /home/error
+2020-10-28 18:00:15.054 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-28 20:56:52.979 +00:00 [INF] Starting host...
+2020-10-28 20:56:56.594 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-28 20:56:56.628 +00:00 [WRN] No XML encryptor configured. Key {93de490f-f489-43cd-b612-597bc56d1985} may be persisted to storage in unencrypted form.
+2020-10-28 20:56:56.665 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-28 20:56:56.674 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-28 20:56:56.679 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-28 20:56:56.682 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-28 20:56:56.683 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-28 20:56:56.684 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-28 20:56:56.685 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-28 20:56:56.686 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-28 20:56:56.834 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-28 20:56:56.835 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-28 20:56:56.836 +00:00 [INF] Hosting environment: Development
+2020-10-28 20:56:56.837 +00:00 [INF] Content root path: /app
+2020-10-28 20:56:57.398 +00:00 [DBG] Login Url: /Account/Login
+2020-10-28 20:56:57.401 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-28 20:56:57.402 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-28 20:56:57.405 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-28 20:56:57.406 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-28 20:56:57.410 +00:00 [DBG] Error Url: /home/error
+2020-10-28 20:56:57.412 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-28 20:59:09.715 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.AggregateException: One or more errors occurred. (Cannot assign requested address)
+ ---> System.Net.Http.HttpRequestException: Cannot assign requested address
+ ---> System.Net.Sockets.SocketException (99): Cannot assign requested address
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at LoginAppService.Services.Service.PostAsync[TResult](String uri, String data) in D:\fse-project\flippy\LoginApp\Services\Service.cs:line 67
+   at LoginAppService.Services.Service.GetTokenAsync(String clientId, String clientsecret, String scope) in D:\fse-project\flippy\LoginApp\Services\Service.cs:line 52
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at LoginAppService.Controllers.LoginController.Login(User user) in D:\fse-project\flippy\LoginApp\Controllers\LoginController.cs:line 65
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IBackChannelLogoutService backChannelLogoutService)
+   at IdentityServer4.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-10-28 21:02:04.024 +00:00 [INF] Starting host...
+2020-10-28 21:02:05.074 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-28 21:02:05.128 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-28 21:02:05.135 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-28 21:02:05.141 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-28 21:02:05.142 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-28 21:02:05.143 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-28 21:02:05.144 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-28 21:02:05.145 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-28 21:02:05.145 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-28 21:02:05.283 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-28 21:02:05.285 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-28 21:02:05.287 +00:00 [INF] Hosting environment: Development
+2020-10-28 21:02:05.288 +00:00 [INF] Content root path: /app
+2020-10-28 21:02:05.846 +00:00 [DBG] Login Url: /Account/Login
+2020-10-28 21:02:05.849 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-28 21:02:05.852 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-28 21:02:05.853 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-28 21:02:05.855 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-28 21:02:05.857 +00:00 [DBG] Error Url: /home/error
+2020-10-28 21:02:05.859 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-28 21:07:15.637 +00:00 [INF] Starting host...
+2020-10-28 21:07:16.637 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-28 21:07:16.697 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-28 21:07:16.707 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-28 21:07:16.713 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-28 21:07:16.726 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-28 21:07:16.727 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-28 21:07:16.728 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-28 21:07:16.730 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-28 21:07:16.731 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-28 21:07:16.888 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-28 21:07:16.889 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-28 21:07:16.891 +00:00 [INF] Hosting environment: Development
+2020-10-28 21:07:16.892 +00:00 [INF] Content root path: /app
+2020-10-28 21:07:17.616 +00:00 [DBG] Login Url: /Account/Login
+2020-10-28 21:07:17.620 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-28 21:07:17.622 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-28 21:07:17.624 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-28 21:07:17.629 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-28 21:07:17.632 +00:00 [DBG] Error Url: /home/error
+2020-10-28 21:07:17.633 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-28 21:22:57.572 +00:00 [INF] Starting host...
+2020-10-28 21:22:58.627 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-28 21:22:58.682 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-28 21:22:58.689 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-28 21:22:58.694 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-28 21:22:58.695 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-28 21:22:58.696 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-28 21:22:58.697 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-28 21:22:58.698 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-28 21:22:58.699 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-28 21:22:58.839 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-28 21:22:58.840 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-28 21:22:58.841 +00:00 [INF] Hosting environment: Development
+2020-10-28 21:22:58.841 +00:00 [INF] Content root path: /app
+2020-10-28 21:22:59.393 +00:00 [DBG] Login Url: /Account/Login
+2020-10-28 21:22:59.397 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-28 21:22:59.399 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-28 21:22:59.403 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-28 21:22:59.405 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-28 21:22:59.406 +00:00 [DBG] Error Url: /home/error
+2020-10-28 21:22:59.407 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-28 21:34:29.464 +00:00 [INF] Starting host...
+2020-10-28 21:34:30.482 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-28 21:34:30.536 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-28 21:34:30.543 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-28 21:34:30.548 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-28 21:34:30.549 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-28 21:34:30.551 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-28 21:34:30.552 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-28 21:34:30.553 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-28 21:34:30.554 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-28 21:34:30.694 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-28 21:34:30.695 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-28 21:34:30.697 +00:00 [INF] Hosting environment: Development
+2020-10-28 21:34:30.698 +00:00 [INF] Content root path: /app
+2020-10-28 21:34:31.261 +00:00 [DBG] Login Url: /Account/Login
+2020-10-28 21:34:31.264 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-28 21:34:31.266 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-28 21:34:31.267 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-28 21:34:31.269 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-28 21:34:31.270 +00:00 [DBG] Error Url: /home/error
+2020-10-28 21:34:31.271 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-28 21:35:20.676 +00:00 [INF] Starting host...
+2020-10-28 21:35:21.667 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-28 21:35:21.720 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-28 21:35:21.728 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-28 21:35:21.732 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-28 21:35:21.733 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-28 21:35:21.734 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-28 21:35:21.735 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-28 21:35:21.736 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-28 21:35:21.737 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-28 21:35:21.871 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-28 21:35:21.872 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-28 21:35:21.873 +00:00 [INF] Hosting environment: Development
+2020-10-28 21:35:21.874 +00:00 [INF] Content root path: /app
+2020-10-28 21:35:22.483 +00:00 [DBG] Login Url: /Account/Login
+2020-10-28 21:35:22.488 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-28 21:35:22.489 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-28 21:35:22.490 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-28 21:35:22.492 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-28 21:35:22.492 +00:00 [DBG] Error Url: /home/error
+2020-10-28 21:35:22.493 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-28 21:36:55.348 +00:00 [ERR] An unhandled exception has occurred while executing the request.
+System.TimeoutException: A timeout occured after 30000ms selecting a server using CompositeServerSelector{ Selectors = MongoDB.Driver.MongoClient+AreSessionsSupportedServerSelector, LatencyLimitingServerSelector{ AllowedLatencyRange = 00:00:00.0150000 } }. Client view of cluster state is { ClusterId : "1", ConnectionMode : "Automatic", Type : "Unknown", State : "Disconnected", Servers : [{ ServerId: "{ ClusterId : 1, EndPoint : "Unspecified/localhost:27017" }", EndPoint: "Unspecified/localhost:27017", State: "Disconnected", Type: "Unknown", HeartbeatException: "MongoDB.Driver.MongoConnectionException: An exception occurred while opening a connection to the server.
+ ---> System.Net.Sockets.SocketException (99): Cannot assign requested address
+   at System.Net.Sockets.Socket.BeginConnectEx(EndPoint remoteEP, Boolean flowContext, AsyncCallback callback, Object state)
+   at System.Net.Sockets.Socket.ConnectAsync(EndPoint remoteEP)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.ConnectAsync(Socket socket, EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.TcpStreamFactory.CreateStreamAsync(EndPoint endPoint, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at MongoDB.Driver.Core.Connections.BinaryConnection.OpenHelperAsync(CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Servers.ServerMonitor.HeartbeatAsync(CancellationToken cancellationToken)", LastUpdateTimestamp: "2020-10-28T21:35:57.6556424Z" }] }.
+   at MongoDB.Driver.Core.Clusters.Cluster.ThrowTimeoutException(IServerSelector selector, ClusterDescription description)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChangedHelper.HandleCompletedTask(Task completedTask)
+   at MongoDB.Driver.Core.Clusters.Cluster.WaitForDescriptionChanged(IServerSelector selector, ClusterDescription description, Task descriptionChangedTask, TimeSpan timeout, CancellationToken cancellationToken)
+   at MongoDB.Driver.Core.Clusters.Cluster.SelectServer(IServerSelector selector, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupportedAfterServerSelection(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.AreSessionsSupported(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoClient.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.OperationExecutor.StartImplicitSession(CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.UsingImplicitSession[TResult](Func`2 func, CancellationToken cancellationToken)
+   at MongoDB.Driver.MongoCollectionImpl`1.FindSync[TProjection](FilterDefinition`1 filter, FindOptions`2 options, CancellationToken cancellationToken)
+   at MongoDB.Driver.FindFluent`2.ToCursor(CancellationToken cancellationToken)
+   at MongoDB.Driver.IAsyncCursorSourceExtensions.Any[TDocument](IAsyncCursorSource`1 source, CancellationToken cancellationToken)
+   at LoginAppService.Data.UserContextSeed.SeedData(IMongoCollection`1 userCollection) in D:\fse-project\flippy\LoginApp\Data\UserContextSeed.cs:line 14
+   at LoginAppService.Services.Service..ctor(IDatabaseSettings settings, IConfiguration config) in D:\fse-project\flippy\LoginApp\Services\Service.cs:line 38
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite singletonCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.IdentityServerMiddleware.Invoke(HttpContext context, IEndpointRouter router, IUserSession session, IEventService events, IBackChannelLogoutService backChannelLogoutService)
+   at IdentityServer4.Hosting.MutualTlsEndpointMiddleware.Invoke(HttpContext context, IAuthenticationSchemeProvider schemes)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-10-29 00:08:54.350 +00:00 [INF] Starting host...
+2020-10-29 00:08:55.484 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-29 00:08:55.538 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-29 00:08:55.546 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-29 00:08:55.550 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-29 00:08:55.551 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-29 00:08:55.553 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-29 00:08:55.553 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-29 00:08:55.554 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-29 00:08:55.555 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-29 00:08:55.691 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-29 00:08:55.692 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-29 00:08:55.693 +00:00 [INF] Hosting environment: Development
+2020-10-29 00:08:55.694 +00:00 [INF] Content root path: /app
+2020-10-29 00:08:56.279 +00:00 [DBG] Login Url: /Account/Login
+2020-10-29 00:08:56.285 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-29 00:08:56.288 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-29 00:08:56.289 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-29 00:08:56.290 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-29 00:08:56.291 +00:00 [DBG] Error Url: /home/error
+2020-10-29 00:08:56.293 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-29 00:10:17.110 +00:00 [INF] Starting host...
+2020-10-29 00:10:18.121 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-29 00:10:18.174 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-29 00:10:18.181 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-29 00:10:18.185 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-29 00:10:18.186 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-29 00:10:18.187 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-29 00:10:18.188 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-29 00:10:18.189 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-29 00:10:18.190 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-29 00:10:18.322 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-29 00:10:18.323 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-29 00:10:18.324 +00:00 [INF] Hosting environment: Development
+2020-10-29 00:10:18.325 +00:00 [INF] Content root path: /app
+2020-10-29 00:10:18.830 +00:00 [DBG] Login Url: /Account/Login
+2020-10-29 00:10:18.833 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-29 00:10:18.834 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-29 00:10:18.835 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-29 00:10:18.836 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-29 00:10:18.838 +00:00 [DBG] Error Url: /home/error
+2020-10-29 00:10:18.838 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-29 00:11:02.889 +00:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-10-29 00:11:02.894 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-10-29 00:11:02.896 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-10-29 00:11:02.900 +00:00 [DBG] Start discovery request
+2020-10-29 00:11:03.086 +00:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2020-10-29 00:11:03.087 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2020-10-29 00:11:03.088 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2020-10-29 00:11:03.091 +00:00 [DBG] Start key discovery request
+2020-10-29 00:11:35.912 +00:00 [INF] Starting host...
+2020-10-29 00:11:36.934 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-29 00:11:36.988 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-29 00:11:36.998 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-29 00:11:37.002 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-29 00:11:37.003 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-29 00:11:37.004 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-29 00:11:37.004 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-29 00:11:37.006 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-29 00:11:37.007 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-29 00:11:37.139 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-29 00:11:37.140 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-29 00:11:37.140 +00:00 [INF] Hosting environment: Development
+2020-10-29 00:11:37.141 +00:00 [INF] Content root path: /app
+2020-10-29 00:11:37.665 +00:00 [DBG] Login Url: /Account/Login
+2020-10-29 00:11:37.668 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-29 00:11:37.669 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-29 00:11:37.670 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-29 00:11:37.671 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-29 00:11:37.672 +00:00 [DBG] Error Url: /home/error
+2020-10-29 00:11:37.673 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-29 00:12:05.066 +00:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-10-29 00:12:05.072 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-10-29 00:12:05.074 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-10-29 00:12:05.077 +00:00 [DBG] Start discovery request
+2020-10-29 00:12:05.301 +00:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2020-10-29 00:12:05.303 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2020-10-29 00:12:05.304 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2020-10-29 00:12:05.307 +00:00 [DBG] Start key discovery request
+2020-10-29 00:13:20.402 +00:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-10-29 00:13:20.405 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-10-29 00:13:20.412 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-10-29 00:13:20.415 +00:00 [DBG] Start discovery request
+2020-10-29 00:13:20.434 +00:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2020-10-29 00:13:20.435 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2020-10-29 00:13:20.437 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2020-10-29 00:13:20.438 +00:00 [DBG] Start key discovery request
+2020-10-29 00:14:33.831 +00:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-10-29 00:14:33.834 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-10-29 00:14:33.835 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-10-29 00:14:33.836 +00:00 [DBG] Start discovery request
+2020-10-29 00:14:33.844 +00:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2020-10-29 00:14:33.846 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2020-10-29 00:14:33.847 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2020-10-29 00:14:33.849 +00:00 [DBG] Start key discovery request
+2020-10-29 00:17:21.788 +00:00 [INF] Starting host...
+2020-10-29 00:17:22.817 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-29 00:17:22.869 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-29 00:17:22.877 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-29 00:17:22.881 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-29 00:17:22.882 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-29 00:17:22.883 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-29 00:17:22.884 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-29 00:17:22.885 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-29 00:17:22.886 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-29 00:17:23.019 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-29 00:17:23.020 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-29 00:17:23.021 +00:00 [INF] Hosting environment: Development
+2020-10-29 00:17:23.022 +00:00 [INF] Content root path: /app
+2020-10-29 00:17:23.877 +00:00 [DBG] Login Url: /Account/Login
+2020-10-29 00:17:23.880 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-29 00:17:23.882 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-29 00:17:23.883 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-29 00:17:23.884 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-29 00:17:23.886 +00:00 [DBG] Error Url: /home/error
+2020-10-29 00:17:23.887 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-29 00:18:42.049 +00:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-10-29 00:18:42.053 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-10-29 00:18:42.056 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-10-29 00:18:42.059 +00:00 [DBG] Start discovery request
+2020-10-29 00:20:26.982 +00:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-10-29 00:20:26.983 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-10-29 00:20:26.984 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-10-29 00:20:26.985 +00:00 [DBG] Start discovery request
+2020-10-29 00:20:27.176 +00:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2020-10-29 00:20:27.178 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2020-10-29 00:20:27.179 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2020-10-29 00:20:27.181 +00:00 [DBG] Start key discovery request
+2020-10-29 00:22:07.315 +00:00 [INF] Starting host...
+2020-10-29 00:22:08.301 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-29 00:22:08.352 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-29 00:22:08.362 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-29 00:22:08.367 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-29 00:22:08.368 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-29 00:22:08.369 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-29 00:22:08.370 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-29 00:22:08.371 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-29 00:22:08.372 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-29 00:22:08.511 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-29 00:22:08.513 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-29 00:22:08.514 +00:00 [INF] Hosting environment: Development
+2020-10-29 00:22:08.515 +00:00 [INF] Content root path: /app
+2020-10-29 00:22:09.025 +00:00 [DBG] Login Url: /Account/Login
+2020-10-29 00:22:09.028 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-29 00:22:09.028 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-29 00:22:09.029 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-29 00:22:09.030 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-29 00:22:09.033 +00:00 [DBG] Error Url: /home/error
+2020-10-29 00:22:09.039 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-29 00:22:25.100 +00:00 [DBG] Request path /connect/token matched to endpoint type Token
+2020-10-29 00:22:25.107 +00:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2020-10-29 00:22:25.108 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2020-10-29 00:22:25.114 +00:00 [DBG] Start token request.
+2020-10-29 00:22:25.117 +00:00 [DBG] Start client validation
+2020-10-29 00:22:25.121 +00:00 [DBG] Start parsing Basic Authentication secret
+2020-10-29 00:22:25.124 +00:00 [DBG] Start parsing for secret in post body
+2020-10-29 00:22:25.128 +00:00 [DBG] Parser found secret: PostBodySecretParser
+2020-10-29 00:22:25.130 +00:00 [DBG] Secret id found: Flippy
+2020-10-29 00:22:25.140 +00:00 [DBG] client configuration validation for client Flippy succeeded.
+2020-10-29 00:22:25.147 +00:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2020-10-29 00:22:25.148 +00:00 [DBG] Client validation success
+2020-10-29 00:22:25.157 +00:00 [DBG] Start token request validation
+2020-10-29 00:22:25.162 +00:00 [DBG] Start client credentials token request validation
+2020-10-29 00:22:25.183 +00:00 [DBG] Flippy credentials token request validation success
+2020-10-29 00:22:25.193 +00:00 [INF] Token request validation success, {"ClientId":"Flippy","ClientName":"Flippy Mobile Client","GrantType":"client_credentials","Scopes":"flippy.api.createorder","AuthorizationCode":"********","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"client_credentials","scope":"flippy.api.createorder","client_id":"Flippy","client_secret":"***REDACTED***"},"$type":"TokenRequestValidationLog"}
+2020-10-29 00:22:25.213 +00:00 [DBG] Getting claims for access token for client: Flippy
+2020-10-29 00:22:25.274 +00:00 [DBG] Token request success.
+2020-10-29 00:22:53.217 +00:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-10-29 00:22:53.221 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-10-29 00:22:53.223 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-10-29 00:22:53.227 +00:00 [DBG] Start discovery request
+2020-10-29 00:22:53.397 +00:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2020-10-29 00:22:53.398 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2020-10-29 00:22:53.401 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2020-10-29 00:22:53.404 +00:00 [DBG] Start key discovery request
+2020-10-29 00:30:00.722 +00:00 [INF] Starting host...
+2020-10-29 00:30:02.061 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2020-10-29 00:30:02.144 +00:00 [INF] Starting IdentityServer4 version 4.1.1+cebd52f5bc61bdefc262fd20739d4d087c6f961f
+2020-10-29 00:30:02.157 +00:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2020-10-29 00:30:02.166 +00:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2020-10-29 00:30:02.167 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2020-10-29 00:30:02.171 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2020-10-29 00:30:02.172 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2020-10-29 00:30:02.173 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2020-10-29 00:30:02.175 +00:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2020-10-29 00:30:02.366 +00:00 [INF] Now listening on: http://[::]:80
+2020-10-29 00:30:02.368 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-10-29 00:30:02.369 +00:00 [INF] Hosting environment: Development
+2020-10-29 00:30:02.371 +00:00 [INF] Content root path: /app
+2020-10-29 00:30:03.073 +00:00 [DBG] Login Url: /Account/Login
+2020-10-29 00:30:03.076 +00:00 [DBG] Login Return Url Parameter: ReturnUrl
+2020-10-29 00:30:03.077 +00:00 [DBG] Logout Url: /Account/Logout
+2020-10-29 00:30:03.082 +00:00 [DBG] ConsentUrl Url: /consent
+2020-10-29 00:30:03.084 +00:00 [DBG] Consent Return Url Parameter: returnUrl
+2020-10-29 00:30:03.086 +00:00 [DBG] Error Url: /home/error
+2020-10-29 00:30:03.088 +00:00 [DBG] Error Id Parameter: errorId
+2020-10-29 00:30:09.490 +00:00 [DBG] Request path /connect/token matched to endpoint type Token
+2020-10-29 00:30:09.496 +00:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2020-10-29 00:30:09.498 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2020-10-29 00:30:09.502 +00:00 [DBG] Start token request.
+2020-10-29 00:30:09.506 +00:00 [DBG] Start client validation
+2020-10-29 00:30:09.509 +00:00 [DBG] Start parsing Basic Authentication secret
+2020-10-29 00:30:09.511 +00:00 [DBG] Start parsing for secret in post body
+2020-10-29 00:30:09.516 +00:00 [DBG] Parser found secret: PostBodySecretParser
+2020-10-29 00:30:09.517 +00:00 [DBG] Secret id found: Flippy
+2020-10-29 00:30:09.524 +00:00 [DBG] client configuration validation for client Flippy succeeded.
+2020-10-29 00:30:09.532 +00:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2020-10-29 00:30:09.533 +00:00 [DBG] Client validation success
+2020-10-29 00:30:09.541 +00:00 [DBG] Start token request validation
+2020-10-29 00:30:09.545 +00:00 [DBG] Start client credentials token request validation
+2020-10-29 00:30:09.563 +00:00 [DBG] Flippy credentials token request validation success
+2020-10-29 00:30:09.574 +00:00 [INF] Token request validation success, {"ClientId":"Flippy","ClientName":"Flippy Mobile Client","GrantType":"client_credentials","Scopes":"flippy.api.createorder","AuthorizationCode":"********","RefreshToken":"********","UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"grant_type":"client_credentials","scope":"flippy.api.createorder","client_id":"Flippy","client_secret":"***REDACTED***"},"$type":"TokenRequestValidationLog"}
+2020-10-29 00:30:09.594 +00:00 [DBG] Getting claims for access token for client: Flippy
+2020-10-29 00:30:09.660 +00:00 [DBG] Token request success.
+2020-10-29 00:30:49.067 +00:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2020-10-29 00:30:49.073 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2020-10-29 00:30:49.075 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2020-10-29 00:30:49.077 +00:00 [DBG] Start discovery request
+2020-10-29 00:30:49.297 +00:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2020-10-29 00:30:49.299 +00:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2020-10-29 00:30:49.300 +00:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2020-10-29 00:30:49.303 +00:00 [DBG] Start key discovery request

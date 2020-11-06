@@ -1,0 +1,17 @@
+2020-09-29 01:48:49.200 -04:00 [INF] Hello, Serilog!
+2020-09-29 01:49:35.181 -04:00 [INF] Hello, Serilog!
+2020-09-29 01:51:34.150 -04:00 [INF] Hello, Serilog!
+2020-09-29 19:31:47.156 -04:00 [INF] Hello, Serilog!
+2020-09-29 19:32:30.650 -04:00 [INF] Hello, Serilog!
+2020-09-29 19:35:56.670 -04:00 [INF] Hello, Serilog!
+2020-09-29 19:37:16.295 -04:00 [INF] Hello, Serilog!
+2020-09-29 19:38:47.560 -04:00 [INF] Hello, Serilog!
+2020-09-29 19:40:31.267 -04:00 [INF] Order Received{"CustomerId":"Test1262","CustomerName":"Test 1","ShopId":"Shop1","ShopName":"Wallmart","Order":{"OrderId":"14565420","RejectReason":null,"DeliveryAddress":"520 MG Road","ItemList":[{"ItemId":"181","Quantity":1000,"Item":"Pen"}]}
+2020-09-29 19:50:42.396 -04:00 [INF] Hello, Serilog!
+2020-09-29 19:52:48.225 -04:00 [INF] Hello, Serilog!
+2020-09-29 19:54:41.990 -04:00 [INF] Hello, Serilog!
+2020-09-29 19:56:27.869 -04:00 [INF] Hello, Serilog!
+2020-09-29 19:59:15.195 -04:00 [INF] Hello, Serilog!
+2020-09-29 20:00:29.678 -04:00 [INF] Order Received:{"CustomerId":"Test1271","CustomerName":"Test 1","ShopId":"Shop1","ShopName":"Wallmart","Order":{"OrderId":"145654229","RejectReason":null,"DeliveryAddress":"520 MG Road","ItemList":[{"ItemId":"190","Quantity":1000,"Item":"Pen"}]}
+2020-09-29 20:01:34.067 -04:00 [INF] Hello, Serilog!
+2020-09-29 20:16:45.496 -04:00 [INF] Hello, Serilog!

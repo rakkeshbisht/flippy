@@ -1,0 +1,6 @@
+2020-10-28 20:07:01.446 -04:00 [INF] ShopPartner subcriptions started
+2020-10-28 20:25:10.361 -04:00 [INF] ShopPartner subcriptions started
+2020-10-28 20:28:34.899 -04:00 [INF] ShopPartner subcriptions started
+2020-10-28 20:29:27.301 -04:00 [INF] ShopPartner subcriptions started
+2020-10-29 01:09:20.041 -04:00 [INF] ShopPartner subcriptions started
+2020-10-29 23:22:40.499 -04:00 [INF] ShopPartner subcriptions started

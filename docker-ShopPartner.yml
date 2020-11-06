@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shoppartner
+  labels:
+    app: shoppartner-webapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: shoppartner
+  template:
+    metadata:
+      labels:
+        app: shoppartner-webapi
+        service: shoppartner
+    spec:
+      containers:
+        - name: shoppartner
+          image: exploredocker.azurecr.io/shoppartner:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shoppartner
+  labels:
+    app: shoppartner-webapi
+    service: shoppartner
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    service: shoppartner

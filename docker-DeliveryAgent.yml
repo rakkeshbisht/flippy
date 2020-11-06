@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deliveryagent
+  labels:
+    app: deliveryagent-webapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: deliveryagent
+  template:
+    metadata:
+      labels:
+        app: deliveryagent-webapi
+        service: deliveryagent
+    spec:
+      containers:
+        - name: deliveryagent
+          image: exploredocker.azurecr.io/deliveryagent:v1
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          env:
+            - name: ASPNETCORE_URLS
+              value: http://+:80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: deliveryagent
+  labels:
+    app: deliveryagent-webapi
+    service: deliveryagent
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  selector:
+    service: deliveryagent

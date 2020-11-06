@@ -1,0 +1,594 @@
+openapi: 3.0.1
+info:
+  title: Flippy
+  description: '**Flippy**'
+  contact:
+    name: StackRoute
+    url: http://stackroute.in
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+- url: http://localhost:7000
+  description: Local Server
+- url: http://dev-flippy.com
+  description: Dev
+- url: http://flippy.com
+  description: Prod
+tags:
+- name: Flippy
+  description: Browse shops, their menus and place orders
+- name: Flippy Shop Partner
+  description: Receiving and accepting new orders for shop
+- name: Flippy Delivery Agent
+  description: On-route delivery status
+  
+security:
+  - Authorization_Header: []
+  
+paths:
+  /api/orders:
+    post:
+      tags:
+      - Flippy
+      summary: 'Place order (Returns: CustomerOrder)'
+      operationId: createOrder
+      requestBody:
+        description: CustomerOrder object
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CustomerOrder'
+        required: true
+      responses:
+        200:
+          description: Successful operation
+          content: {}
+        405:
+          description: Invalid input
+          content: {}
+        default:
+          description: Unexpected error
+          content: {}
+    get:
+      tags:
+      - Flippy
+      summary: 'Get all Customer Orders (paginated) (Returns: CustomerOrdersList)'
+      parameters:
+      - name: customerId
+        in: query
+        description: CustomerId that need to be considered for filter
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: per_page
+        in: query
+        description: Number of items per page
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+      - name: page
+        in: query
+        description: The index of page to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CustomerOrder'
+          headers:
+            X-Total:
+              description: The total number of items 
+              schema:
+                type: integer
+            X-Total-Pages:
+              description: The total number of pages  
+              schema:
+                type: integer
+            X-Per-Page:
+              description: The number of items per page
+              schema:
+                type: integer
+            X-Page:
+              description: The index of the current page (starting at 1)
+              schema:
+                type: integer
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Customer not found
+          content: {}
+      
+  /api/orders/{orderId}:
+    get:
+      tags:
+      - Flippy
+      summary: 'Get specific Customer Order (Returns: CustomerOrder)'
+      parameters:
+      - name: orderId
+        in: path
+        description: ID of Order to return
+        required: true
+        schema:
+          type: string
+      - name: customerId
+        in: query
+        description: CustomerId that need to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerOrder'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/CustomerOrder'
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Order not found
+          content: {}
+          
+  /api/shop/orders:
+    get:
+      tags:
+      - Flippy Shop Partner
+      summary: 'Get all Shop Orders (paginated) (Returns: ShopOrdersList)'
+      parameters:
+      - name: shopId
+        in: query
+        description: ShopId that need to be considered for filter
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: per_page
+        in: query
+        description: Number of items per page
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+      - name: page
+        in: query
+        description: The index of page to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ShopOrder'
+          headers:
+            X-Total:
+              description: The total number of items 
+              schema:
+                type: integer
+            X-Total-Pages:
+              description: The total number of pages  
+              schema:
+                type: integer
+            X-Per-Page:
+              description: The number of items per page
+              schema:
+                type: integer
+            X-Page:
+              description: The index of the current page (starting at 1)
+              schema:
+                type: integer
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Customer not found
+          content: {}
+          
+          
+  /api/shop/orders/{orderId}:
+    get:
+      tags:
+      - Flippy Shop Partner
+      summary: 'Get specific Shop Order (Returns: ShopOrder)'
+      parameters:
+      - name: orderId
+        in: path
+        description: ID of Order to return
+        required: true
+        schema:
+          type: string
+      - name: shopId
+        in: query
+        description: ShopId that need to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShopOrder'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ShopOrder'
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Order not found
+          content: {}     
+          
+  /api/shop/orders/{orderId}/accept:
+    put:
+      tags:
+      - Flippy Shop Partner
+      summary: 'Accept order (Returns: ShopOrder)'
+      parameters:
+      - name: orderId
+        in: path
+        description: ID of Order to return
+        required: true
+        schema:
+          type: string
+      - name: shopId
+        in: query
+        description: ShopId that need to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShopOrder'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ShopOrder'
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Order not found
+          content: {}       
+          
+  /api/shop/orders/{orderId}/reject:
+    put:
+      tags:
+      - Flippy Shop Partner
+      summary: 'Reject order (Returns: ShopOrderRejectRecord)'
+      parameters:
+      - name: orderId
+        in: path
+        description: ID of Order to return
+        required: true
+        schema:
+          type: string
+      - name: shopId
+        in: query
+        description: ShopId that need to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShopOrder'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ShopOrder'
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Order not found
+          content: {}   
+  /api/shop/orders/{orderId}/ready:
+    put:
+      tags:
+      - Flippy Shop Partner
+      summary: 'Order is ready (Returns: ShopOrderReadyRecord)'
+      parameters:
+      - name: orderId
+        in: path
+        description: ID of Order to return
+        required: true
+        schema:
+          type: string
+      - name: shopId
+        in: query
+        description: ShopId that need to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShopOrder'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ShopOrder'
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Order not found
+          content: {}  
+    
+    
+  
+  /api/delivery/orders:
+    get:
+      tags:
+      - Flippy Delivery Agent
+      summary: 'Get all Agent Orders (paginated) (Returns: AgentOrdersList)'
+      parameters:
+      - name: agentId
+        in: query
+        description: AgentId that need to be considered for filter
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      - name: per_page
+        in: query
+        description: Number of items per page
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+      - name: page
+        in: query
+        description: The index of page to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AgentOrder'
+          headers:
+            X-Total:
+              description: The total number of items 
+              schema:
+                type: integer
+            X-Total-Pages:
+              description: The total number of pages  
+              schema:
+                type: integer
+            X-Per-Page:
+              description: The number of items per page
+              schema:
+                type: integer
+            X-Page:
+              description: The index of the current page (starting at 1)
+              schema:
+                type: integer
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Customer not found
+          content: {}
+          
+          
+  /api/delivery/orders/{orderId}:
+    get:
+      tags:
+      - Flippy Delivery Agent
+      summary: 'Get specific Agent Order (Returns: AgentOrder)'
+      parameters:
+      - name: orderId
+        in: path
+        description: ID of Order to return
+        required: true
+        schema:
+          type: string
+      - name: agentId
+        in: query
+        description: AgentId that need to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgentOrder'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/AgentOrder'
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Order not found
+          content: {}     
+          
+  /api/delivery/orders/{orderId}/arrive:
+    put:
+      tags:
+      - Flippy Delivery Agent
+      summary: 'Arrived at Shop (Returns: AgentArrivedRecord)'
+      parameters:
+      - name: orderId
+        in: path
+        description: ID of Order to return
+        required: true
+        schema:
+          type: string
+      - name: agentId
+        in: query
+        description: AgentId that need to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgentOrder'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/AgentOrder'
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Order not found
+          content: {}       
+          
+  /api/delivery/orders/{orderId}/pickup:
+    put:
+      tags:
+      - Flippy Delivery Agent
+      summary: 'Picked up Delivery (Returns: AgentPickupRecord)'
+      parameters:
+      - name: orderId
+        in: path
+        description: ID of Order to return
+        required: true
+        schema:
+          type: string
+      - name: agentId
+        in: query
+        description: AgentId that need to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgentOrder'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/AgentOrder'
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Order not found
+          content: {}   
+  /api/delivery/orders/{orderId}/deliver:
+    put:
+      tags:
+      - Flippy Delivery Agent
+      summary: 'Order Delivered (Returns: AgentDeliveredRecord)'
+      parameters:
+      - name: orderId
+        in: path
+        description: ID of Order to return
+        required: true
+        schema:
+          type: string
+      - name: agentId
+        in: query
+        description: AgentId that need to be considered for filter
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgentOrder'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/AgentOrder'
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Order not found
+          content: {}  
+        
+    
+components:
+  schemas:
+    CustomerOrder: {}
+    ShopOrder: {}
+    AgentOrder: {}
+        
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      name: api-key
+      in: header
